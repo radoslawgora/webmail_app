@@ -1,0 +1,21 @@
+# dependencies
+webmail/node_modules
+webmail/.pnp
+.pnp.js
+
+# testing
+webmail/coverage
+
+# production
+webmail/build
+
+# misc
+webmail/.DS_Store
+webmail/.env.local
+webmail/.env.development.local
+webmail/.env.test.local
+webmail/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
