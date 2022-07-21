@@ -1,15 +1,22 @@
+import * as React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./views/home";
+import Login from "./views/login";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Webmail App
-        </p>
-      </header>
+      <h1>Webmail</h1>
+      <div className="divider"></div>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
     </div>
   );
 }
 
+
 export default App;
+
