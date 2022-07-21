@@ -1,5 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 .mainMenu {
-    height: 900px;
+    margin-right: 0;
+    padding-inline-start: 0;
+    margin-left: 0;
+}
+
+.logoutButtonLink{
+    color: #fff;
+    text-decoration: none;
 }
