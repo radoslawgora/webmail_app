@@ -22,9 +22,11 @@ function Login() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
-                        <Link to="/home"  className="submitLink">Log in</Link>
-                    </Button>
+                    <Link to="/home"  className="submitLink">
+                        <Button variant="primary" type="submit">
+                        Log in
+                        </Button>
+                    </Link>
             </Form>
         </div>
         </div>

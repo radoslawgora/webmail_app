@@ -7,8 +7,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Webmail</h1>
-      <div className="divider"></div>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
