@@ -1,5 +1,4 @@
 import * as React from "react";
-import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Tab from 'react-bootstrap/Tab';
 
@@ -8,7 +7,6 @@ function Messages() {
         <>
         <Tab.Content>
         <Tab.Pane eventKey="#link1">
-            <Col sm={6}>
             <ListGroup>
                 <ListGroup.Item action href="#link1">
                 <h6>Message 1</h6>
@@ -43,10 +41,8 @@ function Messages() {
                 <p>tresc wiadomosci .....</p>
                 </ListGroup.Item>
             </ListGroup>
-            </Col>
         </Tab.Pane>
         <Tab.Pane eventKey="#link2">
-            <Col sm={6}>
                 <ListGroup>
                     <ListGroup.Item action href="#link1">
                     <h6>Message 1</h6>
@@ -81,10 +77,8 @@ function Messages() {
                     <p>tresc wiadomosci .....</p>
                     </ListGroup.Item>
                 </ListGroup>
-                </Col>
         </Tab.Pane>
         <Tab.Pane eventKey="#link3">
-            <Col sm={6}>
                 <ListGroup>
                     <ListGroup.Item action href="#link1">
                     <h6>Message 1</h6>
@@ -119,10 +113,8 @@ function Messages() {
                     <p>tresc wiadomosci .....</p>
                     </ListGroup.Item>
                 </ListGroup>
-                </Col>
         </Tab.Pane>
         <Tab.Pane eventKey="#link4">
-            <Col sm={6}>
             <ListGroup>
                         <ListGroup.Item action href="#link1">
                         <h6>Message 1</h6>
@@ -157,10 +149,8 @@ function Messages() {
                         <p>tresc wiadomosci .....</p>
                         </ListGroup.Item>
                     </ListGroup>
-                </Col>
         </Tab.Pane>
         <Tab.Pane eventKey="#link5">
-            <Col sm={6}>
                 <ListGroup>
                     <ListGroup.Item action href="#link1">
                     <h6>Message 1</h6>
@@ -195,7 +185,6 @@ function Messages() {
                     <p>tresc wiadomosci .....</p>
                     </ListGroup.Item>
                 </ListGroup>
-                </Col>
         </Tab.Pane>
     </Tab.Content>
     </>

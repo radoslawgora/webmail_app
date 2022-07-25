@@ -4,15 +4,17 @@ import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import Messages from "./inboxMessager";
+import Messages from "./Messages";
 import MailContent from "./mailContent";
 
 
 function MailMenu() {
     return (
       <>
-  
-                    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
+        <div className="mailViewContainer" style={{
+            paddingLeft: "0",
+        }}>
+            <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
                 <Row>
                     <Col sm={2}>
                         <ListGroup>
@@ -33,21 +35,20 @@ function MailMenu() {
                             </ListGroup.Item>
                         </ListGroup>
                     </Col>
-                    <Col sm={4}>
+                    <Col sm={3}>
 
                         <Messages />
 
                     </Col>
-                    <Col sm={5}>
+                    <Col sm={6}>
 
                             <MailContent />
 
                     </Col>
-                    <Col sm={1}>
 
-                    </Col>
                 </Row>
-                </Tab.Container>
+            </Tab.Container>
+        </div>
       </>
     );
   }

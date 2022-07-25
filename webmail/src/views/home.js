@@ -11,7 +11,7 @@ function Home() {
     return (
       <>
         <HomeNavbar />
-        <menu className="mainMenu" style={{
+        <menu className="ps-0" style={{
               paddingTop: "10px",
         }}>
             <Tabs
