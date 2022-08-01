@@ -6,13 +6,14 @@ import Button from 'react-bootstrap/Button';
 
 
 function NewMessageView() {
+
     return (
         <>
-            <div className="newMessageContainer" style={{width: "700px", margin: "100px auto", border: "1px solid black"}}>
+            <div className="newMessageContainer" style={{width: "700px", margin: "100px auto"}}>
                 <Form>
                     <div className="closeButtonContainer" style={{ display: "flex", justifyContent: "flex-end" }}>
                         <Link to="/home"  className="submitLink">
-                            <CloseButton style={{padding: "15px"}}></CloseButton>
+                            <CloseButton style={{padding: "25px"}}></CloseButton>
                         </Link>
                     </div>
                     <Form.Group className="mb-3" controlId="formBasicEmail" style={{
@@ -93,7 +94,6 @@ function NewMessageView() {
                     
                 </Form>
             </div>
-            
         </>
     );
   }
