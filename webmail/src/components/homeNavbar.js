@@ -21,8 +21,8 @@ function HomeNavbar () {
         <img src={logo} alt="Logo"/>
         </div>
         <div className="navbarButtons">
-        <Link to="#new"  className="submitLink">
-            <Button as="Link" to="/" variant="success" type="submit">
+        <Link to="/new"  className="submitLink">
+            <Button as="Link" to="/new" variant="success" type="submit">
                 New message
             </Button>
         </Link>
