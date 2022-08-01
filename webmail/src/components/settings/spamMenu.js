@@ -29,7 +29,11 @@ function SpamMenuSetting() {
         <Col sm={9}>
             <Tab.Content>
             <Tab.Pane eventKey="filter">
-            filter
+                <div className="settingContainer" style={{
+                    width: "100%"
+                }}>
+                    
+                </div>
             </Tab.Pane> 
             <Tab.Pane eventKey="rules">
             rules
