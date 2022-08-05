@@ -12,12 +12,10 @@ function MailContent() {
     const trashIcon = <FontAwesomeIcon icon={faTrash} />
     const fileIcon =  <FontAwesomeIcon icon={faFileCircleCheck} />
 
-    const [show, setShow] = useState(false);
+    const [deleteMessageModalShow, deleteMessageSetShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
+    const deleteMessageHandleClose = () => deleteMessageSetShow(false);
+    const deleteMessageHandleShow = () => deleteMessageSetShow(true);
 
     return (
       <>
@@ -29,19 +27,19 @@ function MailContent() {
              <ButtonGroup aria-label="Basic example">
                   <Button variant="outline-secondary" style={{height: "50px"}}>{replyIcon}</Button>
                   <Button variant="outline-secondary" style={{height: "50px"}}>{shareIcon}</Button>
-                  <Button variant="outline-danger" style={{height: "50px"}} onClick={handleShow}>{trashIcon}</Button>
+                  <Button variant="outline-danger" style={{height: "50px"}} onClick={deleteMessageHandleShow}>{trashIcon}</Button>
              </ButtonGroup>
 
-             <Modal show={show} onHide={handleClose}>
+             <Modal show={deleteMessageModalShow} onHide={deleteMessageHandleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>Delete message</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>Do you want delete this message?</Modal.Body>
                   <Modal.Footer>
-                    <Button variant="danger" onClick={handleClose}>
+                    <Button variant="danger" onClick={deleteMessageHandleClose}>
                       Yes
                     </Button>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Button variant="secondary" onClick={deleteMessageHandleClose}>
                       No
                     </Button>
                   </Modal.Footer>

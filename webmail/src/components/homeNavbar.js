@@ -1,10 +1,19 @@
-import * as React from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 
 function HomeNavbar () {
+
+    const [show, setShow] = useState(false);
+
+    let navigate = useNavigate();
+
+    const handleClose = () => setShow(false);
+    const HandleLogout = () => navigate("/");
+    const handleShow = () => setShow(true);
 
     return(
         <nav className="homeNavbar" 
@@ -27,13 +36,26 @@ function HomeNavbar () {
             </Button>
         </Link>
 
-        <Link to="/"  className="submitLink">
-            <Button as="Link" to="/" variant="primary" type="submit" style={{
+            <Button variant="primary" onClick={handleShow} style={{
                 marginLeft: "10px"
             }}>
                 Log out
             </Button>
-        </Link>
+
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Logout</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Do you want to logout?</Modal.Body>
+            <Modal.Footer>
+            <Button variant="primary" onClick={HandleLogout}>
+                Yes
+            </Button>
+            <Button variant="secondary" onClick={handleClose}>
+                No
+            </Button>
+            </Modal.Footer>
+        </Modal>
 
         </div>
         </nav>
