@@ -1,10 +1,9 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReply, faShare, faTrash, faFileCircleCheck } from '@fortawesome/free-solid-svg-icons'
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-
+import Modal from 'react-bootstrap/Modal';
 
 
 function MailContent() {
@@ -12,6 +11,13 @@ function MailContent() {
     const shareIcon = <FontAwesomeIcon icon={faShare} />
     const trashIcon = <FontAwesomeIcon icon={faTrash} />
     const fileIcon =  <FontAwesomeIcon icon={faFileCircleCheck} />
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
 
     return (
       <>
@@ -23,8 +29,24 @@ function MailContent() {
              <ButtonGroup aria-label="Basic example">
                   <Button variant="outline-secondary" style={{height: "50px"}}>{replyIcon}</Button>
                   <Button variant="outline-secondary" style={{height: "50px"}}>{shareIcon}</Button>
-                  <Button variant="outline-danger" style={{height: "50px"}}>{trashIcon}</Button>
+                  <Button variant="outline-danger" style={{height: "50px"}} onClick={handleShow}>{trashIcon}</Button>
              </ButtonGroup>
+
+             <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Delete message</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>Do you want delete this message?</Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="danger" onClick={handleClose}>
+                      Yes
+                    </Button>
+                    <Button variant="secondary" onClick={handleClose}>
+                      No
+                    </Button>
+                  </Modal.Footer>
+            </Modal>
+
               <h2 style={{
                 margin: "15px",
                 textAlign: "right",
@@ -47,7 +69,7 @@ Vestibulum quis est eu lacus lacinia tempus a et arcu. Aenean sed congue augue, 
         <div className="divider" style={{
                   width: "100%",
                   height: "2px",
-                  marginTop: "100px",
+                  marginTop: "20px",
                   backgroundColor: "#176EFD",
                 }}></div>
         
@@ -56,7 +78,7 @@ Vestibulum quis est eu lacus lacinia tempus a et arcu. Aenean sed congue augue, 
             width: "100%",
             textAlign: "left",
           }}>Attachments:</h5>
-          <div className="attachmentFileContainer" style={{width: "200px", paddingTop: "20px"}}>
+          <div className="attachmentFileContainer" style={{width: "200px", paddingTop: "5px"}}>
               <div className="attachmentItem" style={{display: "inline-block", textAlign: "center", width: "100px"}}>
                 {fileIcon}
                 <p style={{fontSize: ".8rem"}}>fileName.pdf</p>
