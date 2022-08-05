@@ -10,7 +10,7 @@ function NewMessageView() {
     return (
         <>
             <div className="newMessageContainer" style={{width: "700px", margin: "auto auto"}}>
-                <Form>
+                <Form >
                     <div className="closeButtonContainer" style={{ display: "flex", justifyContent: "flex-end" }}>
                         <Link to="/home"  className="submitLink">
                             <CloseButton style={{padding: "25px"}}></CloseButton>
