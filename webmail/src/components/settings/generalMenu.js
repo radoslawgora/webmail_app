@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import SettingsSaveButton from "./settiingsSaveButton";
 
 
 
@@ -96,6 +97,7 @@ function GeneralMenuSetting() {
                                 </tr> 
                             </tbody>
                     </Table>
+                    <SettingsSaveButton />
                 </div>
             </Tab.Pane> 
             <Tab.Pane eventKey="mailboxView">
@@ -142,6 +144,7 @@ function GeneralMenuSetting() {
                                 </tr>  
                             </tbody>
                     </Table>
+                    <SettingsSaveButton />
                 </div>
             </Tab.Pane>
             <Tab.Pane eventKey="composing">
