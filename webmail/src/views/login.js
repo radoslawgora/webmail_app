@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import logo from '../assets/logo.png';
 import "./login.css";
 
 const Login = (props) =>{
@@ -21,6 +22,8 @@ const Login = (props) =>{
   
   return(
       <div className="container">
+          
+          <img src={logo} alt="App logo"/>
           <h1 className="m-3">webmail_app</h1>
           <div className="Login">
             <Form className="form" onSubmit={handleSubmit}>
